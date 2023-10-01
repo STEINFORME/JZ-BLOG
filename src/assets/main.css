@@ -1,35 +1,260 @@
 @import './base.css';
 
-#app {
-  max-width: 1280px;
-  margin: 0 auto;
-  padding: 2rem;
-
-  font-weight: normal;
-}
-
-a,
-.green {
-  text-decoration: none;
-  color: hsla(160, 100%, 37%, 1);
-  transition: 0.4s;
-}
-
-@media (hover: hover) {
-  a:hover {
-    background-color: hsla(160, 100%, 37%, 0.2);
+/*
+电脑端
+*/
+@media screen and (min-width:600px){
+  body{
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    background: url(../img/main1.jpg) center center no-repeat;
+    background-size: 100vw 100vh;
+    overflow: hidden;
   }
-}
+  .CIR1{ 
+    width: 22vh;
+    height: 22vh;
+    background-image: url(../img/jyj.jpg);
+    background-size: 100% 100%;
+    border-radius: 1000px;
+    margin: auto;
+    margin-top: 20vh;
+  }
+  .CIR2{ 
+    width: 22vh;
+    height: 22vh;
+    background-image: url(../img/2.jpg);
+    background-size: 100% 100%;
+    border-radius: 1000px;
+    margin: auto;
+    margin-top: 20vh;
+  }
+  .name{
+    margin-top: 2vh;
+    margin: auto;
+    font-size: 33px;
+    width: fit-content;
+    letter-spacing: 2px;
+    color:#C6D2E9; 
+    color:#C6D2E9; 
+    background: linear-gradient(to bottom, #ff0000, #0000ff, #00ff00);
+    background-clip: text;
+    -webkit-background-clip: text;
+    font-family: 'ONEDAY';
+   }
 
-@media (min-width: 1024px) {
-  body {
+  .direction{
+    width: 100%;
+    height: 100vh;
     display: flex;
-    place-items: center;
+    position: absolute;
+    bottom: 0;
+    flex-direction: row;
+   
+    padding: 0;
+    flex-wrap: wrap;
+  }
+}
+/*
+手机端
+*/
+@media screen and (max-width:600px){
+  body{
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    background: url(../img/main2.png) center center no-repeat;
+    background-size: cover;
+  }
+  .CIR1{ 
+    width: 10vh;
+    height: 10vh;
+    background-image: url(../img/jyj.jpg);
+    background-size: 100% 100%;
+    border-radius: 100px;
+    margin: auto;
+    margin-top: 20vh;
+  }
+  .CIR2{ 
+    width: 10vh;
+    height: 10vh;
+    background-image: url(../img/2.jpg);
+    background-size: 100% 100%;
+    border-radius: 100px;
+    margin: auto;
+    margin-top: 20vh;
+  }
+  .name{
+    margin: auto;
+    font-size: 30px;
+   
+    width: fit-content;
+    color:#C6D2E9; 
+    background: linear-gradient(to right, #ff0000, #0000ff, #00ff00);
+    background-clip: text;
+    -webkit-background-clip: text;
+    font-family: 'ONEDAY';
+   }
+  .direction{
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    flex-direction: row;
+    position: absolute;
+    bottom: 0;
+    padding: 0;
+    flex-wrap: wrap;
+    
   }
 
-  #app {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    padding: 0 2rem;
+}
+.mengban1{
+ width: 20vw;
+  height: 100%;
+  background-color: rgb(0, 0, 0,0.4);
+  
+}
+.mengban2{
+ width: 80vw;
+  height: 100%;
+  background-color: rgb(0, 0, 0,0.6);
+ 
+}
+@font-face {
+  font-family: 'arizon';
+  src: url(../font/ARIZON.otf);
+}
+@font-face {
+  font-family: 'Basicaline';
+  src: url(../font/Basicaline-NonCommercial-2.otf);
+}
+@font-face {
+  font-family: 'ONEDAY';
+  src: url(../font/ONEDAY-3.ttf);
+}
+
+.login{
+  width: 20vh;
+  height: 4vh;
+  background-color: #0094D9;
+  margin: auto;
+  margin-top: 5vh;
+  border-radius: 20px;
+  color:#C6D2E9; 
+    text-align: center;
+    font-family: 'ONEDAY';
+    font-size: 24PX;
+}
+.tourist{
+  width: 20vh;
+  height: 4vh;
+  background-color: #0094D9;
+  margin: auto;
+  margin-top: 5vh;
+  border-radius: 20px;
+  color:#C6D2E9; 
+    text-align: center;
+    font-family: 'ONEDAY';
+    font-size: 24PX;
+}
+.zhezhao1{
+width: 100%;
+height: 100vh;
+position: absolute;
+top: 0;
+background-image: url(../img/main1.jpg);
+display: flex;
+flex-direction: column;
+
+justify-content: center;
+align-items: center;
+overflow: hidden;
+user-select: none
+}
+.welcome{
+  width: fit-content;
+  height: 80px;
+  font-family: 'ONEDAY';
+  line-height: 45px;
+  color:#C6D2E9; 
+  background: linear-gradient(to right, #ff0000, #000000, #00ff00);
+  background-clip: text;
+  -webkit-background-clip: text;
+font-size: 45px;
+letter-spacing: 4px;
+user-select: none;
+}
+
+.JZLOGO{
+  margin-bottom: 10vh;
+  user-select: none
+
+
+}
+.arrow{
+ position: absolute;
+ bottom: 0;
+  height: 10vh;
+  animation: move 2s infinite;
+ 
+}
+
+@keyframes move {
+  from {
+    bottom: 0;
   }
+  to {
+    bottom: 5vh;
+  }
+}
+@keyframes welcomemove {
+  from {
+    height: 100vh;
+  }
+  to {
+    height:0vh;
+  }
+}
+@keyframes welcomeback{
+  from {
+    height: 0vh;
+  }
+  to {
+    height:100vh;
+  }
+}
+@keyframes chooseY{
+  from {
+   width: 20vw;
+  }
+  to {
+    width: 80vw;
+  }
+}
+@keyframes chooseN{
+  from {
+   width: 80vw;
+  }
+  to {
+    width: 20vw;
+  }
+}
+@keyframes show{
+  from {
+   opacity: 0;
+   }
+   to {
+     opacity: 1;
+   }
+}
+@keyframes hid{
+  from {
+   opacity: 1;
+   }
+   to {
+     opacity: 0;
+   }
 }
